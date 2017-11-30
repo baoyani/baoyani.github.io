@@ -1,6 +1,5 @@
-# baoyani.github.io
+# 我的博客
 baoyuan_blog
-#我的博客
 *	地址：http://suby.site/
 
 #安装说明
