@@ -2,13 +2,13 @@
 <search>
   <entry>
     <title></title>
-    <url>%2F2017%2F11%2F30%2Fhello-travis-ci%2F</url>
-    <content type="text"><![CDATA[hello-travis-ci]]></content>
+    <url>%2F2017%2F11%2F30%2Fcode%201%2F</url>
+    <content type="text"><![CDATA[#include #include typedef struct node{ int data; struct node *next;}node; node qbuild(node first){ int i,n,a[100]; node s; printf(“输入n:”); scanf(“%d”,&amp;n); first=(node)malloc(sizeof(node)); first-&gt;next=NULL; for(i=0;idata=a[i]; s-&gt;next=first-&gt;next; first-&gt;next=s; } return first;} node hbuild(node first){ int i,n,a[100]; struct node s,r; printf(“输入n:”); scanf(“%d”,&amp;n); first=(node*)malloc(sizeof(node)); r=first; for(i=0;i&lt;n;i++) { s=(node*)malloc(sizeof(node)); printf(&quot;输入a[%d]:&quot;,i); scanf(&quot;%d&quot;,&amp;a[i]); s-&gt;data=a[i]; r-&gt;next=s; r=s; } r-&gt;next=NULL; return first; } node hebing(node La,node Lb){ node pa,pb,pc,*Lc; pa=La-&gt;next; pb=Lb-&gt;next; Lc=pc=La; while(pa &amp;&amp; pb) { if(pa-&gt;data &lt; pb-&gt;data){ pc-&gt;next =pa; pc=pa; pa=pa-&gt;next ; } else if(pa-&gt;data &gt; pb-&gt;data){ pc-&gt;next =pb; pc=pb; pb=pb-&gt;next; } else{ pc-&gt;next =pa; pc=pa; pa=pa-&gt;next ; pb=pb-&gt;next ; } } pc-&gt;next =pa?pa:pb; free(Lb); return Lc; } node shanchu(node first,int i){ node p,q; p=first-&gt;next; while(p) { if((p-&gt;next )-&gt;data==i) { q=p-&gt;next ; p-&gt;next =q-&gt;next; free(q); break; } p=p-&gt;next; } return first;} void display(node first){ struct node p; p=first-&gt;next; while(p!=NULL) { printf(“%d “,p-&gt;data); p=p-&gt;next; } printf(&quot;\n&quot;); } int main(){ int m; struct node a,b,*c; a=qbuild(a); printf(“打印链表a：”); display(a); b=hbuild(b); printf(&quot;打印链表b：&quot;); display(b); c=hebing(a,b); printf(&quot;打印链表c：&quot;); display(c); printf(&quot;输入删除的数m:&quot;); scanf(&quot;%d&quot;,&amp;m); c=shanchu(c,m); printf(&quot;打印删除后的链表c:&quot;); display(c); return 0; }]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F11%2F30%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title></title>
+    <url>%2F2017%2F11%2F30%2Fhello-travis-ci%2F</url>
+    <content type="text"><![CDATA[hello-travis-ci]]></content>
   </entry>
   <entry>
     <title></title>
@@ -16,8 +16,8 @@
     <content type="text"><![CDATA[hello-travis-ci]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2017%2F11%2F30%2Fcode%201%2F</url>
-    <content type="text"><![CDATA[#include #include typedef struct node{ int data; struct node *next;}node; node qbuild(node first){ int i,n,a[100]; node s; printf(“输入n:”); scanf(“%d”,&amp;n); first=(node)malloc(sizeof(node)); first-&gt;next=NULL; for(i=0;idata=a[i]; s-&gt;next=first-&gt;next; first-&gt;next=s; } return first;} node hbuild(node first){ int i,n,a[100]; struct node s,r; printf(“输入n:”); scanf(“%d”,&amp;n); first=(node*)malloc(sizeof(node)); r=first; for(i=0;i&lt;n;i++) { s=(node*)malloc(sizeof(node)); printf(&quot;输入a[%d]:&quot;,i); scanf(&quot;%d&quot;,&amp;a[i]); s-&gt;data=a[i]; r-&gt;next=s; r=s; } r-&gt;next=NULL; return first; } node hebing(node La,node Lb){ node pa,pb,pc,*Lc; pa=La-&gt;next; pb=Lb-&gt;next; Lc=pc=La; while(pa &amp;&amp; pb) { if(pa-&gt;data &lt; pb-&gt;data){ pc-&gt;next =pa; pc=pa; pa=pa-&gt;next ; } else if(pa-&gt;data &gt; pb-&gt;data){ pc-&gt;next =pb; pc=pb; pb=pb-&gt;next; } else{ pc-&gt;next =pa; pc=pa; pa=pa-&gt;next ; pb=pb-&gt;next ; } } pc-&gt;next =pa?pa:pb; free(Lb); return Lc; } node shanchu(node first,int i){ node p,q; p=first-&gt;next; while(p) { if((p-&gt;next )-&gt;data==i) { q=p-&gt;next ; p-&gt;next =q-&gt;next; free(q); break; } p=p-&gt;next; } return first;} void display(node first){ struct node p; p=first-&gt;next; while(p!=NULL) { printf(“%d “,p-&gt;data); p=p-&gt;next; } printf(&quot;\n&quot;); } int main(){ int m; struct node a,b,*c; a=qbuild(a); printf(“打印链表a：”); display(a); b=hbuild(b); printf(&quot;打印链表b：&quot;); display(b); c=hebing(a,b); printf(&quot;打印链表c：&quot;); display(c); printf(&quot;输入删除的数m:&quot;); scanf(&quot;%d&quot;,&amp;m); c=shanchu(c,m); printf(&quot;打印删除后的链表c:&quot;); display(c); return 0; }]]></content>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F11%2F30%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
