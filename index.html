@@ -326,301 +326,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/code 1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Su Baoyani">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/30/code 1/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T06:48:23+00:00">
-                2017-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#include<stdio.h></stdio.h></p>
-<p>#include<stdlib.h></stdlib.h></p>
-<p>typedef struct node{<br>    int  data;<br>    struct node *next;<br>}node;</p>
-<p>node <em> qbuild(node </em>first)<br>{<br>    int i,n,a[100];<br>    node <em>s;<br>    printf(“输入n:”);<br>    scanf(“%d”,&amp;n);<br>    first=(node</em>)malloc(sizeof(node));<br>    first-&gt;next=NULL;<br>    for(i=0;i<n;i++) {="" s="(node*)malloc(sizeof(node));" printf("输入a[%d]:",i);="" scanf("%d",&a[i]);="" s-="">data=a[i];<br>        s-&gt;next=first-&gt;next;<br>        first-&gt;next=s;<br>    }<br>    return first;<br>}</n;i++)></p>
-<p>node <em> hbuild(node </em>first)<br>{<br>    int i,n,a[100];<br>    struct node <em>s,</em>r;<br>    printf(“输入n:”);<br>    scanf(“%d”,&amp;n);<br>    first=(node*)malloc(sizeof(node));<br>    r=first;<br>    for(i=0;i&lt;n;i++)<br>    {</p>
-<pre><code>    s=(node*)malloc(sizeof(node));
-    printf(&quot;输入a[%d]:&quot;,i);
-    scanf(&quot;%d&quot;,&amp;a[i]);
-    s-&gt;data=a[i];
-    r-&gt;next=s;
-    r=s;
-}
-r-&gt;next=NULL;
-return first;
-</code></pre><p>}</p>
-<p>node <em> hebing(node </em>La,node <em>Lb)<br>{<br>    node </em>pa,<em>pb,</em>pc,*Lc;<br>    pa=La-&gt;next;<br>    pb=Lb-&gt;next;<br>    Lc=pc=La;<br>    while(pa &amp;&amp; pb)<br>    {<br>        if(pa-&gt;data &lt; pb-&gt;data){<br>            pc-&gt;next =pa;<br>            pc=pa;<br>            pa=pa-&gt;next ;<br>        }</p>
-<pre><code>    else if(pa-&gt;data &gt; pb-&gt;data){
-        pc-&gt;next =pb;
-        pc=pb;
-        pb=pb-&gt;next;
-    }
-
-    else{
-        pc-&gt;next =pa;
-        pc=pa;
-        pa=pa-&gt;next ;
-        pb=pb-&gt;next ;
-    }
-
-}
-pc-&gt;next =pa?pa:pb;
-free(Lb);
-return Lc;
-</code></pre><p>}</p>
-<p>node <em> shanchu(node </em>first,int i)<br>{<br>    node <em>p,</em>q;<br>    p=first-&gt;next;<br>    while(p)<br>    {<br>        if((p-&gt;next )-&gt;data==i)<br>        {<br>           q=p-&gt;next  ;<br>           p-&gt;next =q-&gt;next;<br>           free(q);<br>           break;<br>        }<br>           p=p-&gt;next;<br>    }<br>    return first;<br>}</p>
-<p>void display(node <em>first)<br>{<br>    struct node </em>p;<br>    p=first-&gt;next;<br>    while(p!=NULL)<br>    {<br>        printf(“%d “,p-&gt;data);<br>        p=p-&gt;next;</p>
-<pre><code>}
-printf(&quot;\n&quot;);
-</code></pre><p>}</p>
-<p>int main()<br>{<br>    int m;<br>    struct node <em>a,</em>b,*c;<br>    a=qbuild(a);<br>    printf(“打印链表a：”);<br>    display(a);</p>
-<pre><code>b=hbuild(b);
-printf(&quot;打印链表b：&quot;);
-display(b);
-
-c=hebing(a,b);
-printf(&quot;打印链表c：&quot;);
-display(c);
-
-printf(&quot;输入删除的数m:&quot;);
-scanf(&quot;%d&quot;,&amp;m);
-c=shanchu(c,m);
-printf(&quot;打印删除后的链表c:&quot;);
-display(c);
-
-return 0;
-</code></pre><p>}</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/hello-t/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Su Baoyani">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/30/hello-t/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T06:48:23+00:00">
-                2017-11-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>hello-travis-ci</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/hello-travis-ci/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,7 +357,7 @@ return 0;
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T06:48:23+00:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T14:56:26+00:00">
                 2017-11-30
               </time>
             
@@ -772,7 +477,7 @@ return 0;
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T06:48:23+00:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T14:56:26+00:00">
                 2017-11-30
               </time>
             
@@ -821,6 +526,301 @@ return 0;
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/hello-t/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Su Baoyani">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/30/hello-t/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T14:56:26+00:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>hello-travis-ci</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/code 1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Su Baoyani">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/30/code 1/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T14:56:26+00:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#include<stdio.h></stdio.h></p>
+<p>#include<stdlib.h></stdlib.h></p>
+<p>typedef struct node{<br>    int  data;<br>    struct node *next;<br>}node;</p>
+<p>node <em> qbuild(node </em>first)<br>{<br>    int i,n,a[100];<br>    node <em>s;<br>    printf(“输入n:”);<br>    scanf(“%d”,&amp;n);<br>    first=(node</em>)malloc(sizeof(node));<br>    first-&gt;next=NULL;<br>    for(i=0;i<n;i++) {="" s="(node*)malloc(sizeof(node));" printf("输入a[%d]:",i);="" scanf("%d",&a[i]);="" s-="">data=a[i];<br>        s-&gt;next=first-&gt;next;<br>        first-&gt;next=s;<br>    }<br>    return first;<br>}</n;i++)></p>
+<p>node <em> hbuild(node </em>first)<br>{<br>    int i,n,a[100];<br>    struct node <em>s,</em>r;<br>    printf(“输入n:”);<br>    scanf(“%d”,&amp;n);<br>    first=(node*)malloc(sizeof(node));<br>    r=first;<br>    for(i=0;i&lt;n;i++)<br>    {</p>
+<pre><code>    s=(node*)malloc(sizeof(node));
+    printf(&quot;输入a[%d]:&quot;,i);
+    scanf(&quot;%d&quot;,&amp;a[i]);
+    s-&gt;data=a[i];
+    r-&gt;next=s;
+    r=s;
+}
+r-&gt;next=NULL;
+return first;
+</code></pre><p>}</p>
+<p>node <em> hebing(node </em>La,node <em>Lb)<br>{<br>    node </em>pa,<em>pb,</em>pc,*Lc;<br>    pa=La-&gt;next;<br>    pb=Lb-&gt;next;<br>    Lc=pc=La;<br>    while(pa &amp;&amp; pb)<br>    {<br>        if(pa-&gt;data &lt; pb-&gt;data){<br>            pc-&gt;next =pa;<br>            pc=pa;<br>            pa=pa-&gt;next ;<br>        }</p>
+<pre><code>    else if(pa-&gt;data &gt; pb-&gt;data){
+        pc-&gt;next =pb;
+        pc=pb;
+        pb=pb-&gt;next;
+    }
+
+    else{
+        pc-&gt;next =pa;
+        pc=pa;
+        pa=pa-&gt;next ;
+        pb=pb-&gt;next ;
+    }
+
+}
+pc-&gt;next =pa?pa:pb;
+free(Lb);
+return Lc;
+</code></pre><p>}</p>
+<p>node <em> shanchu(node </em>first,int i)<br>{<br>    node <em>p,</em>q;<br>    p=first-&gt;next;<br>    while(p)<br>    {<br>        if((p-&gt;next )-&gt;data==i)<br>        {<br>           q=p-&gt;next  ;<br>           p-&gt;next =q-&gt;next;<br>           free(q);<br>           break;<br>        }<br>           p=p-&gt;next;<br>    }<br>    return first;<br>}</p>
+<p>void display(node <em>first)<br>{<br>    struct node </em>p;<br>    p=first-&gt;next;<br>    while(p!=NULL)<br>    {<br>        printf(“%d “,p-&gt;data);<br>        p=p-&gt;next;</p>
+<pre><code>}
+printf(&quot;\n&quot;);
+</code></pre><p>}</p>
+<p>int main()<br>{<br>    int m;<br>    struct node <em>a,</em>b,*c;<br>    a=qbuild(a);<br>    printf(“打印链表a：”);<br>    display(a);</p>
+<pre><code>b=hbuild(b);
+printf(&quot;打印链表b：&quot;);
+display(b);
+
+c=hebing(a,b);
+printf(&quot;打印链表c：&quot;);
+display(c);
+
+printf(&quot;输入删除的数m:&quot;);
+scanf(&quot;%d&quot;,&amp;m);
+c=shanchu(c,m);
+printf(&quot;打印删除后的链表c:&quot;);
+display(c);
+
+return 0;
+</code></pre><p>}</p>
 
           
         
