@@ -1,5 +1,5 @@
 #我的博客
-*	地址：http://suby.site/
+*	地址：http://suby.fun/
 
 #安装说明
 *	1.fork库到自己的github
